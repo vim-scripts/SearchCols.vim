@@ -1,0 +1,12 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2543
+
+This script was inspired by a question on StackOverflow.com.  It's my first vim script, and is likely very bad, however I've made my best efforts to have it play nicely.
+
+Creates a command :SearchCols <string>, which can be used to search for the string in fixed-width columns so that the search looks in the first column first, then the second column, etc. rather than the row-by-row search which is standard for vim.  Repeat the command via @: and then @@ since it's a colon-command.
+
+Requirements:
+ - This script requires the multvals.vim plugin: http://www.vim.org/scripts/script.php?script_id=171
+
+Assumptions:
+ - Assumes that your file is formatted with whitespace-delimited fixed width columns, i.e. there are no spaces inside the data items, only in between them.
+ - Assumes that the first line of your file is formatted so that the column widths can be deduced from it.
